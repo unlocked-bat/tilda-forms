@@ -1,3 +1,6 @@
+Описание на google docs: https://docs.google.com/document/d/1M8PosUTJrNpYssQpj9fP6nL8nZysSiqJ_lMjC8g-adc/edit?usp=sharing
+--------
+
 1. Переименовать файл htaccess в .htaccess (с точкой). Находится в корне сайта.
 2. Загрузить в корень сайта:
     - Папку lib
