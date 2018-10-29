@@ -52,9 +52,6 @@ if ($_POST) {
     $data[$k] = $v;
   }
 
-  echo "<pre>"; print_r($files); echo "</pre>";
-  echo "<pre>"; print_r($data); echo "</pre>";
-
   $data['Referer'] = $_POST['tildaspec-referer'];
   $subject = 'Заявка с формы на сайте '.$site;
 
