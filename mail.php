@@ -49,11 +49,15 @@ if ($_POST) {
   foreach ($_POST as $k => $v) {
     if ($k == 'form-spec-comments') break; // no tilda additional info
     if (strpos($v, 'upwidget') === 0) continue; // no tilda attachmnets
-    $data[$k] = $v;
+    if ($k == 'tildaspec-formname') {
+      $data['Форма'] = $v;
+    } else {
+      $data[$k] = $v;
+    }
   }
 
   $data['Referer'] = $_POST['tildaspec-referer'];
-  $subject = 'Заявка с формы на сайте '.$site;
+  $subject = 'Заявка с формы ['.$data['Форма'].'] на сайте '.$site;
 
   foreach ($data as $k => $v) {
     $msg .= '<b>'.$k.':</b> '.$v.'<br>';
