@@ -37,6 +37,7 @@ if ($_POST) {
   $data       = [];
   $site       = $_SERVER['SERVER_NAME'];
   $from_email = 'noreply@' . $site;
+  $from_name  = 'Mailer';
   $to_email   = 'test@test.com';
 
   $files = [];
@@ -65,7 +66,7 @@ if ($_POST) {
 
   $mail = new PHPMailer;
   $mail->CharSet  = 'UTF-8';
-  $mail->setFrom($from_email, 'Mailer');
+  $mail->setFrom($from_email, $from_name);
   $mail->Subject  = $subject;
   $mail->Body     = $msg;
   $mail->IsHTML(true);
